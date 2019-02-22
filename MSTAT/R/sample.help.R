@@ -1,0 +1,12 @@
+#' @title List of codes available in the package
+#' @author Nithin Nayak
+#' @description \link{sample.t.test}  For t-test (Paired,Independent,onesided)
+#' @description \link{sample.prop.test} For difference in proportion
+#' @description \link{sample.anova.test} For  One-Way anova
+#' @description \link{sample.r.test} For correlation Coefficient
+#' @description \link{sample.estimate} For estimation of mean or proportion
+#' @export
+
+sample.help=function(){
+  return(?sample.help)
+}

@@ -1,0 +1,20 @@
+"0","```r
+library(readxl)
+non_normal=read_excel(\"practical3.xls\");attach(non_normal)
+```"
+"1","The following objects are masked _by_ .GlobalEnv:
+
+    intervention, standardcare1, standardcare2
+
+The following objects are masked from non_normal (pos = 5):
+
+    intervention, standardcare1, standardcare2
+"
+"0","```r
+par(mfrow=c(1,3))
+qqnorm(standardcare1,main=\"Standard care1\");qqline(standardcare1)
+qqnorm(intervention,main=\"intervention\");qqline(intervention)
+```"
+"0","```r
+qqnorm(standardcare2,main=\"Standard care2\");qqline(standardcare2)
+```"

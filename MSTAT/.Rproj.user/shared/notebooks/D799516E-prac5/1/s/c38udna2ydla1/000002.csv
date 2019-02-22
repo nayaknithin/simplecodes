@@ -1,0 +1,14 @@
+"0","```r
+(T=TukeyHSD(a1))
+```"
+"1","  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = values ~ ind)
+
+$ind
+                                   diff         lwr        upr     p adj
+standardcare2-standardcare1  0.05402633 -0.02089514  0.1289478 0.2017864
+intervention-standardcare1  -0.35107144 -0.42599291 -0.2761500 0.0000000
+intervention-standardcare2  -0.40509777 -0.48001924 -0.3301763 0.0000000
+"

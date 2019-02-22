@@ -1,0 +1,18 @@
+"0","```r
+norm_data=data.frame(standardcare1,standardcare2,intervention)
+norm_data=stack(norm_data)
+attach(norm_data);a1=aov(values~ind)
+```"
+"1","The following objects are masked from norm_data (pos = 5):
+
+    ind, values
+"
+"0","```r
+summary(a1)
+```"
+"1","            Df Sum Sq Mean Sq F value Pr(>F)    
+ind          2 2.1287  1.0643   99.31 <2e-16 ***
+Residuals   63 0.6752  0.0107                   
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+"

@@ -1,0 +1,10 @@
+"0","```r
+fisher.test(OB_TAB)
+```"
+"1","
+	Fisher's Exact Test for Count Data
+
+data:  OB_TAB
+p-value = 0.0001895
+alternative hypothesis: two.sided
+"

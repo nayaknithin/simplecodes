@@ -19,8 +19,13 @@ if(!estimate=="mu"){
   p=as.numeric(readline("Enter p: "))
   if(is.na(p)){return("Error: p cannot be missing please enter a value")}
   if(p>1|p<0){return("Error: p should be a value between 0 and 1")}
-  d=as.numeric(readline("Enter d: "))
-  n=(Z.alpha*sqrt(p*(1-p))/d)**2;return(cat("Sample size for estimation of proportion is:",n))
-}}
+  d=as.numeric(readline("Enter d (if u have relative precision then press ENTER): "))
+  if(!is.na(d)){if(d>1|d<0){return("Error: d should be a value between 0 and 1")}
+  n=(Z.alpha*sqrt(p*(1-p))/d)**2;return(cat("estimation of proportion:",n,"\n"))
+  }else{e=as.numeric(readline("Enter relative precision: "))
+  if(e>1|e<0){return("Error: 'relative precision' should be a value between 0 and 1")}
+  n=(Z.alpha*sqrt(p*(1-p))/(e*p))**2;return(cat("estimation of proportion:",n,"\n"))
+  }}
+}
 
 

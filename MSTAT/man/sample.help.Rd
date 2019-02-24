@@ -13,9 +13,13 @@ sample.help()
 
 \link{sample.anova.test} For  One-Way anova
 
+\link{sample.repanov.test} For Repeated measures ANOVA
+
 \link{sample.r.test} For correlation Coefficient
 
 \link{sample.estimate} For estimation of mean or proportion
+
+\link{sample.sen.spec} For estimation of sensitivity and specificity
 }
 \author{
 Nithin Nayak

@@ -13,6 +13,7 @@
 #' @export
 
 sample.t.test=function(d=NULL,sd=NULL,w=NULL,sig.level=0.05,power=0.8,oneside=F,nonpar=F,inflate=c(0.20,0.15),paired=F){
+  if(!is.null(w)&!is.null(d)){return(print("Error: Either w or (d and sd) should be input. Not both"))}
   Z.alph=qnorm(if(oneside==T){1-sig.level}else{1-(sig.level/2)})
   Z.beta=qnorm(power)
   if(is.null(w)){ifelse(is.null(d)|is.null(sd),return(print("Error:d and sd or effect size(w) must be specified")),n<-((Z.alph+Z.beta)*sd/d)**2)}

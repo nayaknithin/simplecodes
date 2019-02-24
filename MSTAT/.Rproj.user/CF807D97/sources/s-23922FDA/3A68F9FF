@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1550979135750.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3312543593",
+    "id" : "3A68F9FF",
+    "lastKnownWriteTime" : 1550979220,
+    "last_content_update" : 1550979220032,
+    "path" : "~/MSTAT/R/sample.repanova.test.R",
+    "project_path" : "R/sample.repanova.test.R",
+    "properties" : {
+        "cursorPosition" : "10,17",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

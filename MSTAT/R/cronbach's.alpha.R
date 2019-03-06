@@ -22,7 +22,7 @@ for(j in 1:ncol(x)){
     m[i]=var(d[,i]);c.sum[i]=sum(d[,i])};t=array()
     for(i in 1:nrow(d)){
       t[i]=sum(d[i,])
-    };mean.del=sum(c.sum)/nrow(d);v=round(var(c.sum),3);co=cor(x[,j],t)
+    };mean.del=sum(c.sum)/nrow(d);v=round(var(t),3);co=cor(x[,j],t)
     s=sum(m)/var(t);s=1-s
     k=ncol(d)/(ncol(d)-1)
     deleted[j,]=c(j,mean.del,v,co,s*k)

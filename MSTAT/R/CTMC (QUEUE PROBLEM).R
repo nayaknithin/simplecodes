@@ -1,30 +1,61 @@
-#' @title MM1Queue
-#' @author Nithin Nayak
-#' @param N initial size of the queue
-#' @param lambda arrival rate
+#' @title MM1 Queu Problem
+#' @author Nithin
+#' @param lambda Arrival rate
 #' @param mu Departure rate
-#' @param Time Time for which you want to see arrivals and departures in the queue
-#' @param n number of transitions; either n or Time should be mentioned
-#' @examples
-#' MM1Queue(lamda=3,mu=4,Time=8)
-#' MM1Queue(lamda=4,mu=4,n=100)
+#' @param  time time for which you want the process to run
 #' @export
 
 
 
 
-MM1Queue=function(N=0,lambda,mu,Time=0,n=0){
-  m=0;result=data.frame(N=0,Total_Time=0);t=0
-  repeat{m=m+1
+
+
+
+MM1=function(lambda,mu,time){
+  n=0;t=0
+  Q=0;Queue=data.frame(transition=n,Time=t,Queue_Length=Q)
   r=runif(1)
-  if(N==0){X=-log(r)/lambda;t=t+X;N=N+1}else{X=-log(r)/lambda;Y=-log(r)/mu
-  Z=min(X,Y)
-  if(Z==Y){N=N-1}else{N=N+1}
-  t=t+Z
+
+  if(Q==0){
+    X=-(log(r))/lambda
+    t=X+t
+    n=n+1
+    Q=Q+1
+    Queue[n,]=c(n,X,Q)
+   }
+  if(!Q==0){r=runif(1);X=-(log(r))/lambda
+   Y=-(log(r))/mu
+    repeat{
+      n=n+1
+      Z=min(X,Y)
+      t=t+Z
+      if(Z==X){Q=Q+1;r=runif(1);X=-(log(r))/lambda
+      Y=Y-Z
+      }else{
+        Q=Q-1;r=runif(1)
+        Y=-(log(r))/mu
+        X=X-Z
+      }
+      Queue[n,]=c(n,Z,Q)
+
+      if(Q==0){r=runif(1)
+        X=-(log(r))/lambda
+        t=X+t
+        n=n+1
+        Q=Q+1
+        Queue[n,]=c(n,X,Q)
+      }
+    if(t>time)break}
   }
-  result[m,]=c(N,t)
-  time=ceiling(t)
-  if(time==Time|m==n){break}}
-  return(result)}
+
+  a=plot(Queue$transition,Queue$Queue_Length,type="s",xlab="Time",ylab="Queue length",
+         main="M/M/1 Simulation")
+
+return(list(Queue,a))
+}
+
+
+
+MM1(3,4,8)
 
 

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1557208299496.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3189847480",
+    "id" : "51C1A865",
+    "lastKnownWriteTime" : 1557208351,
+    "last_content_update" : 1557208351996,
+    "path" : "~/MSTAT/R/packages.R",
+    "project_path" : "R/packages.R",
+    "properties" : {
+        "cursorPosition" : "9,69",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

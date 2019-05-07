@@ -51,3 +51,12 @@ MM1=function(lambda,mu,time){
   return(list(Queue,a))
 }
 
+
+
+
+
+
+
+
+
+}

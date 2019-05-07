@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1557206952810.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1840324843",
+    "id" : "CC8F94EB",
+    "lastKnownWriteTime" : 1557207147,
+    "last_content_update" : 1557207147127,
+    "path" : "~/MSTAT/R/Sem II Codes.Rmd",
+    "project_path" : "R/Sem II Codes.Rmd",
+    "properties" : {
+        "chunk_output_type" : "inline",
+        "cursorPosition" : "6,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

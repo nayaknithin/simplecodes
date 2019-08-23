@@ -7,6 +7,7 @@
 #' @description \link{sample.r.test} For correlation Coefficient
 #' @description \link{sample.estimate} For estimation of mean or proportion
 #' @description \link{sample.sen.spec} For estimation of sensitivity and specificity
+#' @description \link{sample.kappa} For estimation of Kappa coefitient
 #' @export
 
 sample.help=function(){

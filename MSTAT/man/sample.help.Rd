@@ -20,6 +20,8 @@ sample.help()
 \link{sample.estimate} For estimation of mean or proportion
 
 \link{sample.sen.spec} For estimation of sensitivity and specificity
+
+\link{sample.kappa} For estimation of Kappa coefitient
 }
 \author{
 Nithin Nayak

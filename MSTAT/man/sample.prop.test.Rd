@@ -4,7 +4,7 @@
 \alias{sample.prop.test}
 \title{Sample size for comparison of proportion}
 \usage{
-sample.prop.test(p1, p2, d = NULL, sig.level = 0.05, power = 0.8,
+sample.prop.test(p1, p2, d = NA, sig.level = 0.05, power = 0.8,
   oneside = F)
 }
 \arguments{

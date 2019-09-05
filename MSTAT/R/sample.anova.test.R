@@ -12,10 +12,11 @@
 #' @export
 
 
-sample.anova.test=function(k,d,sd,w=NULL,sig.level=0.05,power=0.8,nonpar=F,inflate=c(0.15,0.20)){
-  g=dim(combn(k,2))[2];if(is.null(g)){g<-1}
+sample.anova.test=function(k,d=NA,sd=NA,w=NA,sig.level=0.05,power=0.8,nonpar=F,inflate=c(0.15,0.20)){
+  g=dim(combn(k,2))[2];if(is.na(g)){g<-1}
+  if(!is.na(w)&!is.na(d)){return(print("Error: Either w or (d and sd) should be input. Not both"))}
   Z.alph=qnorm(1-((sig.level/2)/g));Z.beta=qnorm(power)
-  if(is.null(w)){ifelse(is.null(d)|is.null(sd),return(print("Error:d and sd or effect size(w) must be specified")),n<-2*((Z.alph+Z.beta)*sd/d)**2)}
-  if(!is.null(w)){n=2*((Z.alph+Z.beta)/w)**2}
+  if(is.na(w)){ifelse(is.na(d)|is.na(sd),return(print("Error:d and sd or effect size(w) must be specified")),n<-2*((Z.alph+Z.beta)*sd/d)**2)}
+  if(!is.na(w)){n=2*((Z.alph+Z.beta)/w)**2}
   sample.size=array();for(i in 1:length(inflate)){sample.size[i]=n/(1-inflate[i])}
   ifelse(nonpar==T,return(data.frame(inflation=inflate,sample.size)),return(n))}

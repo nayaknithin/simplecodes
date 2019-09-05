@@ -4,7 +4,7 @@
 \alias{sample.t.test}
 \title{Sample size for t test}
 \usage{
-sample.t.test(d = NULL, sd = NULL, w = NULL, sig.level = 0.05,
+sample.t.test(d = NA, sd = NA, w = NA, sig.level = 0.05,
   power = 0.8, oneside = F, nonpar = F, inflate = c(0.2, 0.15),
   paired = F)
 }

@@ -4,7 +4,7 @@
 \alias{sample.repanova.test}
 \title{Sample Size for repeated measures ANOVA}
 \usage{
-sample.repanova.test(d = NULL, sd = NULL, w = NULL, m, rho,
+sample.repanova.test(d = NA, sd = NA, w = NA, m, rho = 0.3,
   sig.level = 0.05, power = 0.8, nonpar = F, inflate = c(0.15,
   0.2))
 }

@@ -12,7 +12,7 @@
 #' @export
 
 
-sample.repanova.test=function(d=NULL,sd=NULL,w=NULL,m,rho,sig.level=0.05,power=0.8,nonpar=F,inflate=c(0.15,0.2)){
+sample.repanova.test=function(d=NA,sd=NA,w=NA,m,rho=0.3,sig.level=0.05,power=0.8,nonpar=F,inflate=c(0.15,0.2)){
   Z.alpha=qnorm(1-sig.level/2);Z.beta=qnorm(power)
   if(!is.null(w)&!is.null(d)){return(print("Error: Either w or (d and sd) should be input. Not both"))}
   if(is.null(w)){ifelse(is.null(d)|is.null(sd),return(print("Error:d and sd or effect size(w) must be specified")),n<-(2*((Z.alph+Z.beta)^2)*(1+((m-1)*rho))*(sd**2)/(d**2)))}

@@ -9,8 +9,7 @@ BINGO=function(mat=NULL,random=T){
   number=1:ncol(mat)**2;column=array()
   row=array()
   repeat{n=as.numeric(readline(prompt="New number: "))
-    if(any(number==n)){number=number[-which(number==n)]
-    cat("Select from \n",number,"\n")}else{cat("Number already canceled \n Select from \n",number,"\n")}
+    if(any(number==n)){number=number[-which(number==n)]}
   mat[mat==n]=NA
          for(i in 1:ncol(mat)){
            column[i]=all(is.na(mat[,i]))  
@@ -19,7 +18,8 @@ BINGO=function(mat=NULL,random=T){
            row[i]=all(is.na(mat[i,]))  
          }
          a=sum(row)+sum(column)
+         print(list(list(YOUR_MATRIX=mat,AVAILABLE_NUMBERS=number)))
          if(a==5){break}
   }
-  return(cat("BINGO!!! Congrats \n"))
+  return(cat("################## \n \n BINGO!!! Congrats \n \n################## \n"))
   }

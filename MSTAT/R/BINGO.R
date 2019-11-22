@@ -12,13 +12,13 @@ BINGO=function(mat=NULL,random=T){
     if(any(number==n)){number=number[-which(number==n)]}
   mat[mat==n]=NA
          for(i in 1:ncol(mat)){
-           column[i]=all(is.na(mat[,i]))  
+           column[i]=all(is.na(mat[,i]))
          }
          for(i in 1:nrow(mat)){
-           row[i]=all(is.na(mat[i,]))  
+           row[i]=all(is.na(mat[i,]))
          }
          a=sum(row)+sum(column)
-         print(list(list(YOUR_MATRIX=mat,AVAILABLE_NUMBERS=number)))
+         print(list(YOUR_MATRIX=mat,AVAILABLE_NUMBERS=number))
          if(a==5){break}
   }
   return(cat("################## \n \n BINGO!!! Congrats \n \n################## \n"))

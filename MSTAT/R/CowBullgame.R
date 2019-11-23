@@ -8,10 +8,16 @@ CowBull.game=function(num=NULL){
   if(is.null(num)){num=as.character(sample(0:9,4,replace = F))}else{num=as.character(num)
   num=strsplit(num,"")[[1]]}
  n=0
+ bull=0
  result=data.frame(Guess=0,...=0,Cow.Bull=0)
  repeat{n=n+1
  guess=readline("Enter your number or Q to quit: ")
- if(guess=="Q"|guess=="q"){break}else{guess=strsplit(guess,"")[[1]]}
+ if(guess=="Q"|guess=="q"){break}else{guess=strsplit(guess,"")[[1]]
+ if(length(guess)>=5|length(guess)<=3){print("The Number should be 4 digits" )
+  ;n=n-1; next}else{charcheck=suppressWarnings(as.numeric(guess))
+  if(!sum(is.na(charcheck))==0){print("Wrong character inserted Please insert only numbers");n=n-1; next}
+  }
+ }
  check=matrix(guess, nrow = length(guess), ncol = length(guess),byrow = T)==num
  cowcheck=check
  diag(cowcheck)<-rep(F,4)
@@ -23,6 +29,6 @@ CowBull.game=function(num=NULL){
  cat("\n")
  if(bull==4)break}
  if(bull==4){return(cat("You Win!! \n
-                        No. of Trials = ",n))}else{cat("You Didn't Complete the game \n",
-                                                                 "You Quitted after trying",n,"times\n")}
+                        No. of Trials = ",n,"\n"))}else{cat("You Didn't Complete the game \n",
+                                                                 "You Quitted after trying",n-1,"times\n")}
  }

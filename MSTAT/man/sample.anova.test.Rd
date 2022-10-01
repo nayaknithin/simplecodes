@@ -4,8 +4,16 @@
 \alias{sample.anova.test}
 \title{Sample size for One-way ANOVA}
 \usage{
-sample.anova.test(k, d = NA, sd = NA, w = NA, sig.level = 0.05,
-  power = 0.8, nonpar = F, inflate = c(0.15, 0.2))
+sample.anova.test(
+  k,
+  d = NA,
+  sd = NA,
+  w = NA,
+  sig.level = 0.05,
+  power = 0.8,
+  nonpar = F,
+  inflate = c(0.15, 0.2)
+)
 }
 \arguments{
 \item{k}{No. of groups (No.of multiple comparisons will be calculated automatically)}

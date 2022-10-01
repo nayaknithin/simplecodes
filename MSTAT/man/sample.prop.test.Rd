@@ -4,8 +4,7 @@
 \alias{sample.prop.test}
 \title{Sample size for comparison of proportion}
 \usage{
-sample.prop.test(p1, p2, d = NA, sig.level = 0.05, power = 0.8,
-  oneside = F)
+sample.prop.test(p1, p2, d = NA, sig.level = 0.05, power = 0.8, oneside = F)
 }
 \arguments{
 \item{d}{The expected difference in proportion. If not entered d will be calculated as (p2-p1)}

@@ -4,8 +4,13 @@
 \alias{sample.r.test}
 \title{sample.r.test}
 \usage{
-sample.r.test(r = 0.3, sig.level = 0.05, power = 0.8, nonpar = F,
-  inflate = c(0.15, 0.2))
+sample.r.test(
+  r = 0.3,
+  sig.level = 0.05,
+  power = 0.8,
+  nonpar = F,
+  inflate = c(0.15, 0.2)
+)
 }
 \arguments{
 \item{r}{Anticipated correlation coefficient. Defaults to 0.3}

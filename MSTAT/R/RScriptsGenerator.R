@@ -5,7 +5,7 @@
 #' @description This function generates R script files in a given path.
 #' @export
 
-RscriptGenerator<-function(path=getwd(),ScriptNames=NULL){
+RscriptGenerator=function(path=getwd(),ScriptNames=NULL){
   if(is.null(ScriptNames)){stop("ScriptNames cannot be empty.\n Please provide atleast one script name inside 'ScriptNames' argument")}
   ScriptNames<- gsub(" ","",ScriptNames)
   tempgen=function(filename){

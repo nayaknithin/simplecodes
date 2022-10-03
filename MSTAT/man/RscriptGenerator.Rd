@@ -9,7 +9,7 @@ RscriptGenerator(path = getwd(), ScriptNames = NULL)
 \arguments{
 \item{path}{The directory path where you want to create the R script files. defaults to your current working directory.}
 
-\item{ScriptNames}{The character vector indicating the names of the Rsripts to be generate.}
+\item{ScriptNames}{The character vector indicating the names of the R sripts to be generate.}
 }
 \description{
 This function generates R script files in a given path.

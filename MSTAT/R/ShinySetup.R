@@ -1,11 +1,10 @@
 #' @title File Structure generator function for Shiny App development
 #' @author Nithin Nayak
-#' @param path The directory path where you want to setup the Shiny app folder. defaults to your current working directory.
-#' @param folders The character vector indicating the names of the sub directories to be generate.
-#' @description This function generates R Scripts files in a given path.
+#' @param path The directory path where you want to setup the Shiny app folder; defaults to your current working directory.
+#' @description This function help setup directories and files for new Shiny development.
 #' @export
 
-ShinySetup<-function(path=getwd(),...){
+ShinySetup=function(path=getwd()){
   folders=c("R","www")
 for (i in 1:length(folders)){
   if(dir.exists(paste0(path,"/",folders[i],sep=""))){cat("\n xxxxxxxxxxxxxxx\n Folder ",folders[i],"already exits...\n Skipping this folder...\n \n")

@@ -10,7 +10,7 @@ RscriptGenerator<-function(path=getwd(),ScriptNames=NULL){
   ScriptNames<- gsub(" ","",ScriptNames)
   tempgen=function(filename){
     tempile=file(paste0(path,"/",filename,".R",sep=""))
-    writeLines("",tempile)
+    writeLines("#This code was auto generated using MSTAT::RscriptGenerator() function.",tempile)
     close(tempile)
   }
   for(i in 1:length(ScriptNames)){

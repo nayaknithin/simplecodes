@@ -9,7 +9,7 @@ UseMethod("ShinySetup")
 
 
 
-setMethod("ShinySetup","character",
+setMethod("ShinySetup","ANY",
           function(path=getwd()){
 
             cat(cli::rule(

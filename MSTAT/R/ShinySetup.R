@@ -16,7 +16,7 @@ setMethod("ShinySetup","ANY",
               left = crayon::bold("Creating Sub-Directories"),
               right = Sys.time()
             ),"\n")
-            folders=c("R","www")
+            folders=c("R","www","Modules")
             for (i in 1:length(folders)){
               if(dir.exists(paste0(path,"/",folders[i],sep=""))){cat(crayon::red(cli::symbol$cross)," Folder",paste0("~/",folders[i],sep="")," already exist...\n Skipping this folder...\n")
               }else{
@@ -35,7 +35,16 @@ setMethod("ShinySetup","ANY",
             ui="ui <- fluidPage(\n \n )\n"
             server="server <- funcion(input,output,session){\n \n }\n"
             global="# Packages Required -------------------------------------------------------
-\n library(shiny) \n #add additional packages required here...."
+\nlibrary(shiny)\n#add additional packages required here....
+
+dir.names=c('R','Modules') \n
+for(i in 1:length(dir.names)){
+  sapply(
+    list.files(paste0('./',dir.names[i],'/',sep=''),
+    pattern='*.R$',
+    recursive = T),
+    source)
+}\nrm(list=c('dir.names','i'))\n"
 
             for (i in 1:length(Scripts)) {
               filename=paste0(path,"/",Scripts[i],".R",sep="")

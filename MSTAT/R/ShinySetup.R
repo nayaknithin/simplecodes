@@ -33,18 +33,21 @@ setMethod("ShinySetup","ANY",
             Scripts=c("global","ui","server","app")
             app="shinyApp(ui=ui,server=server)\n"
             ui="ui <- fluidPage(\n \n )\n"
-            server="server <- funcion(input,output,session){\n \n }\n"
+            server="server <- function(input,output,session){\n \n }\n"
             global="# Packages Required -------------------------------------------------------
 \nlibrary(shiny)\n#add additional packages required here....
 
-dir.names=c('R','Modules') \n
+dir.names=c('R','Modules')
+
 for(i in 1:length(dir.names)){
+  dir.path<-paste0(dir.names[i],'/',sep='')
   sapply(
-    list.files(paste0('./',dir.names[i],'/',sep=''),
+    paste0(dir.path,list.files(dir.path,
     pattern='*.R$',
-    recursive = T),
+    recursive = T)),
     source)
-}\nrm(list=c('dir.names','i'))\n"
+}
+rm(list=c('dir.names','i'))"
 
             for (i in 1:length(Scripts)) {
               filename=paste0(path,"/",Scripts[i],".R",sep="")
